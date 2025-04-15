@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+
+    
+
+    <title> WebApp - portifólio</title>
+    <!-- Regitro do service worker -->
+     <script>
+        if ('ServiceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then (() => console.log("serviceWorker registrado"))
+                .catch((err) => console.error("Erro no ServiceWorker:", err));
+        } 
+     </script>
+     <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+     </style>
+
+</head>
+<body>
+    <!-- Iframe que carrega o ite encapsulado -->
+    <iframe src="https://3-tec-sis.vercel.app/" title="Portifólio 2025" frameborder="0"></iframe>
+    
+</body>
+</html>
